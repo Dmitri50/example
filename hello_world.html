@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello React!</title>
+    <!-- import React libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>    
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function formatName(obj) {
+        return obj.name + ", my " + obj.pet_type;
+      }
+      var name = "Boomer";
+      var petObj = {
+        name: "Boomer",
+        pet_type: "dog"
+      };
+      //const element = <h1>Hello {petObj.name + ", my " + petObj.pet_type} </h1>;
+      const element = <h1>Hello {formatName(petObj)} </h1>;
+      const imageElement = <img src="like.png"></img>;
+      const likes = <div><img src="like.png"></img><p>Likes:1</p></div>;
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(element);
+      root.render(imageElement);
+      root.render(likes);
+    </script>
+    
+  </body>
+</html>
